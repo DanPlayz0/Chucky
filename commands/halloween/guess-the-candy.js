@@ -7,7 +7,7 @@ const guessable = [
   { name: "DOTS", imageItem: "https://discord.mx/R14IulXDJL.png" },
   { name: "Reese's", imageItem: "https://discord.mx/oaXhs1w7O2.png" },
   { name: "Starburst", imageItem: "https://discord.mx/4avjEM7lK7.png" },
-  { name: "Candy Corn", imageItem: "https://discord.mx/i/ZGcF2rURaC.png" },
+  { name: "Candy Corn", imageItem: "https://discord.mx/ZGcF2rURaC.png" },
 ].map((x, i) => (x.id = i, x)).slice(0, 25);
 
 module.exports = class extends Command {
@@ -38,7 +38,7 @@ module.exports = class extends Command {
       .setTitle("Guess the Candy")
       .setDescription(`Only the silhouette is visible. Press the buttons below to guess. Your guessing time runs out <t:${time2Guess}:R>!`)
       .setImage('attachment://hidden.png')
-      .setColor(ctx.color())
+      .setColor("Orange")
 
     const msg = await ctx.sendMsg({
       embeds: [guessImage],
@@ -93,7 +93,7 @@ module.exports = class extends Command {
         .setTitle("Guess the Candy")
         .setDescription(`Only the silhouette is visible. Press the buttons below to guess. Your guessing time runs out <t:${time2Guess}:R>!`)
         .setImage(`attachment://${selection.name.replace(/[^a-zA-Z0-9]/g, '')}.png`)
-        .setColor(ctx.color())
+        .setColor("Orange")
 
       msg.edit({ embeds: [guessImage2, actionEmbed], components: [], files: [{ name: `${selection.name.replace(/[^a-zA-Z0-9]/g, '')}.png`, attachment: selection.imageItem }] });
     });
