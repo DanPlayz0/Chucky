@@ -26,11 +26,12 @@ module.exports = class extends Command {
     
     embed
       .setAuthor({ name: ctx.client.user.username, iconURL: ctx.client.user.displayAvatarURL({ dynamic: true, format: 'png' }) })
-      .setDescription(`You can do \`${ctx.prefix}help [command]\` for more info on a command\nYou can also join the [support server](${ctx.client.config.supportServerInvite}) for more information.`)
+      .setDescription(`You can do \`${ctx.prefix}help [command]\` for more info on a command.`)
       .setFields([
-        { name: '➤ General', value: ctx.client.commands.filter(m => m.conf.category == "General").map(m => `\`${m.commandData.name}\``).join(' ') || 'None', inline: false }
+        { name: '➤ General', value: ctx.client.commands.filter(m => m.conf.category == "General").map(m => `\`${m.commandData.name}\``).join(' ') || 'None', inline: false },
+        { name: '➤ Halloween', value: ctx.client.commands.filter(m => m.conf.category == "Halloween").map(m => `\`${m.commandData.name}\``).join(' ') || 'None', inline: false }
       ])
-      .setFooter({text: "This bot was made for the top.gg halloween hackathon"});
+      .setFooter({text: "This bot was made within two weeks for the top.gg halloween hackathon"});
     ctx.sendMsg(embed)
   }
   async commandInfo(ctx, command, embed) {
