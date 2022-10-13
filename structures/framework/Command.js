@@ -45,7 +45,7 @@ module.exports = class Command {
     if(commandType === 'slash') {
       await ctx.interaction.deferReply();
       try {
-        await this.runInteraction(ctx);
+        await this.run(ctx);
       } catch (err) {
         console.error(err);
         ctx.client.webhooks.error.send(`**${ctx.client.user.username} - Command Error:**\n\`\`\`\n${err.stack}`.slice(0,1995)+'\`\`\`')
