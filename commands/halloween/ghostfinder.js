@@ -12,16 +12,23 @@ const treeKits = {
     imageSize: 700,
     minMax: [8, 13],
     guessAmt: 3,
-    normalHouse: "https://discord.mx/9V04uAJdMO.png",
-    trickHouse: "https://discord.mx/xptVcIfz8N.png",
+    normalHouse: "https://discord.mx/oKR1PCczk7.png",
+    trickHouse: "https://discord.mx/f5ss2dw1E7.png",
   },
   hard: {
     imageSize: 400,
     minMax: [14, 25],
     guessAmt: 1,
-    normalHouse: "https://discord.mx/9V04uAJdMO.png",
-    trickHouse: "https://discord.mx/xptVcIfz8N.png",
+    normalHouse: "https://discord.mx/CxRnBX4V82.png",
+    trickHouse: "https://discord.mx/kdVuvGAv7K.png",
   },
+  improbable: {
+    imageSize: 400,
+    minMax: [14, 25],
+    guessAmt: 1,
+    normalHouse: "https://discord.mx/CxRnBX4V82.png",
+    trickHouse: "https://discord.mx/qM408mPJJQ.png",
+  }
 };
 
 module.exports = class extends Command {
@@ -39,6 +46,7 @@ module.exports = class extends Command {
             { name: "Easy", value: "easy" },
             { name: "Normal", value: "normal" },
             { name: "Hard", value: "hard" },
+            { name: "Improbable", value: "improbable" },
           ],
         },
       ],
