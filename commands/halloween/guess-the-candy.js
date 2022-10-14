@@ -91,7 +91,7 @@ module.exports = class extends Command {
 
       const guessImage2 = new ctx.EmbedBuilder()
         .setTitle("Guess the Candy")
-        .setDescription(`Only the silhouette is visible. Press the buttons below to guess. Your guessing time runs out <t:${time2Guess}:R>!`)
+        .setDescription(`Only the silhouette is visible. Press the buttons below to guess.`)
         .setImage(`attachment://${selection.name.replace(/[^a-zA-Z0-9]/g, '')}.png`)
         .setColor("Orange")
 

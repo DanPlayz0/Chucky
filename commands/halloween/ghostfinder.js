@@ -135,7 +135,7 @@ module.exports = class extends Command {
               .setTitle("Try Again")
               .setColor("Orange")
               .setDescription(
-                `You still have ${triesLeft} attempts and <t:${(Math.floor(Date.now()+timeLeft))}:R> to guess the correct one.`
+                `You still have ${triesLeft} attempts and time ends <t:${Math.floor((Date.now()+(timeLeft-Date.now()))/1000)}:R>, to guess the correct one.`
               ),
           ],
           ephemeral: true,
