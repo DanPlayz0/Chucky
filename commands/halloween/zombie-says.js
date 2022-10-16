@@ -104,7 +104,7 @@ module.exports = class extends Command {
     const msg = await ctx.sendMsg(new ctx.EmbedBuilder()
     .setTitle('Zombie Says')
     .setColor("#7F8D72")
-    .setDescription(`Memorize the steps in the image. Time runs out in <t:${Math.floor((Date.now()+1e3*15)/1000)}:R>`)
+    .setDescription(`Memorize the steps in the image. Time runs out <t:${Math.floor((Date.now()+1e3*15)/1000)}:R>`)
     .setImage("attachment://zombiesays-steps.png"), {
       files: [{name: "zombiesays-steps.png", attachment: canvasSteps.toBuffer() }],
       components: [{
