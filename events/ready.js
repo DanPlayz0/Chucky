@@ -11,7 +11,7 @@ module.exports = class extends Event {
 
     async function setupInit() {
       // Set the game as the "Watching for tags"
-      client.user.setActivity(`servers • /help`, { type: "WATCHING" });
+      client.user.setActivity(`scary movies • /help`, { type: 3 });
     }
 
     setupInit();
