@@ -5,9 +5,9 @@
     "klaw": "^4.0.1",
     "module-alias": "^2.2.2"
   },
-  "name": "discordbot-boilerplate",
+  "name": "chucky",
   "version": "1.0.0",
-  "description": "A basic boilerplate using Discord.JS",
+  "description": "The most random Halloween bot, with a bit of fun and games.",
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
@@ -16,19 +16,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanPlayz0/DiscordBot-Boilerplate.git"
+    "url": "git+https://github.com/DanPlayz0/Topgg-Halloween-Hackathon-2022.git"
   },
   "keywords": [
-    "discord",
+    "halloween",
+    "hackathon",
     "bot",
-    "boilerplate"
+    "discord",
+    "topgg",
+    "top-gg"
   ],
   "author": "DanPlayz0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DanPlayz0/DiscordBot-Boilerplate/issues"
+    "url": "https://github.com/DanPlayz0/Topgg-Halloween-Hackathon-2022/issues"
   },
-  "homepage": "https://github.com/DanPlayz0/DiscordBot-Boilerplate#readme",
+  "homepage": "https://github.com/DanPlayz0/Topgg-Halloween-Hackathon-2022#readme",
   "_moduleAliases": {
     "@root": ".",
     "@assets": "./assets/",
