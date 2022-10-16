@@ -1,0 +1,347 @@
+[
+  {
+    "question": "Where was the origin of Halloween?",
+    "answers": [
+      {
+        "name": "The Celts",
+        "correct": true
+      },
+      {
+        "name": "United Kingdom",
+        "correct": false
+      },
+      {
+        "name": "United States",
+        "correct": false
+      },
+      {
+        "name": "Germany",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What do vampires use as beds?",
+    "answers": [
+      {
+        "name": "Coffins",
+        "correct": true
+      },
+      {
+        "name": "Beds",
+        "correct": false
+      },
+      {
+        "name": "Glasses",
+        "correct": false
+      },
+      {
+        "name": "Skulls",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What mythical giant sea monster had tentacles and lived near Greenland?",
+    "answers": [
+      {
+        "name": "Bigfoot",
+        "correct": false
+      },
+      {
+        "name": "Nemo",
+        "correct": false
+      },
+      {
+        "name": "Wall-e",
+        "correct": false
+      },
+      {
+        "name": "Kraken",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "What color is associated with Halloween?",
+    "answers": [
+      {
+        "name": "White",
+        "correct": false
+      },
+      {
+        "name": "Gray",
+        "correct": false
+      },
+      {
+        "name": "Black",
+        "correct": true
+      },
+      {
+        "name": "Blue",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Werewolves are also called?",
+    "answers": [
+      {
+        "name": "Lobo",
+        "correct": false
+      },
+      {
+        "name": "Mishka",
+        "correct": false
+      },
+      {
+        "name": "Lycanthropes",
+        "correct": true
+      },
+       {
+        "name": "Akela",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What phobia do you suffer if you are afraid of Halloween?",
+    "answers": [
+      {
+        "name": "Phasmophobia",
+        "correct": false
+      },
+      {
+        "name": "Samhainphobia",
+        "correct": true
+      },
+      {
+        "name": "Wiccaphobia",
+        "correct": false
+      },
+      {
+        "name": "Halloweenphobia",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "In which city was the original Ghost Busters filmed in?",
+    "answers": [
+      {
+        "name": "London",
+        "correct": false
+      },
+      {
+        "name": "New York City",
+        "correct": true
+      },
+      {
+        "name": "Seattle",
+        "correct": false
+      },
+      {
+        "name": "Maiami",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Pumpkins are in the same family as which plant?",
+    "answers": [
+      {
+        "name": "Cucumbers",
+        "correct": false
+      },
+      {
+        "name": "Bananas",
+        "correct": false
+      },
+      {
+        "name": "Potatoes",
+        "correct": false
+      },
+      {
+        "name": "Tomatoes",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What is a collection of witches called?",
+    "answers": [
+      {
+        "name": "Cavern",
+        "correct": false
+      },
+      {
+        "name": "Coven",
+        "correct": true
+      },
+      {
+        "name": "Cauldron",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Which part of a pumpkin cannot be eaten?",
+    "answers": [
+      {
+        "name": "the flower",
+        "correct": false
+      },
+      {
+        "name": "the seeds",
+        "correct": false
+      },
+      {
+        "name": "the stem",
+        "correct": true
+      },
+      {
+        "name": "the inside flesh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How many pounds of candy corn are made each year for Halloween?",
+    "answers": [
+      {
+        "name": "5 million",
+        "correct": false
+      },
+      {
+        "name": "11 million",
+        "correct": false
+      },
+      {
+        "name": "18 million",
+        "correct": false
+      },
+      {
+        "name": "35 million",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "When is Halloween thought to have originated?",
+    "answers": [
+      {
+        "name": "around 2,000 years ago",
+        "correct": true
+      },
+      {
+        "name": "1910",
+        "correct": false
+      },
+      {
+        "name": "about 1,000 years ago",
+        "correct": false
+      },
+      {
+        "name": "roughly 20 years ago",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How much did the world's heavist pumpkin weigh?",
+    "answers": [
+      {
+        "name": "Under 1,000 pounds",
+        "correct": false
+      },
+      {
+        "name": "1,000 pounds",
+        "correct": false
+      },
+      {
+        "name": "2,000 pounds",
+        "correct": false
+      },
+      {
+        "name": "Over 2,000 pounds",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "What does the word \"witch\" mean?",
+    "answers": [
+      {
+        "name": "woman with the black point hat",
+        "correct": false
+      },
+      {
+        "name": "it was actually originally 'wice' wich means 'wise woman'",
+        "correct": false
+      },
+      {
+        "name": "the one with spells",
+        "correct": true
+      },
+      {
+        "name": "cat lady",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What do whiches fly on in stories?",
+    "answers": [
+      {
+        "name": "Planes",
+        "correct": false
+      },
+      {
+        "name": "Brooms",
+        "correct": true
+      },
+      {
+        "name": "Magic Carpets",
+        "correct": false
+      },
+      {
+        "name": "Dragon",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What fruit do you 'bob' for?",
+    "answers": [
+      {
+        "name": "Bananas",
+        "correct": false
+      },
+      {
+        "name": "Grapefruit",
+        "correct": false
+      },
+      {
+        "name": "Grapes",
+        "correct": false
+      },
+      {
+        "name": "Apples",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Halloween is on the 31st of October every year",
+    "answers": [
+      {
+        "name": "True",
+        "correct": true
+      },
+      {
+        "name": "False",
+        "correct": false
+      }
+    ]
+  }
+]
