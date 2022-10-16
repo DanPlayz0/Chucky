@@ -24,7 +24,7 @@ module.exports = class BotClient extends Discord.Client {
     this.webhooks = new (require('@structures/webhooks/WebhookManager.js'))(this);
     this.loader = new (require('./Loader.js'))(this);
 
-    this.database.init();
+    // this.database.init();
     this.loader.start();
   }
 }
