@@ -1,16 +1,9 @@
 {
   "dependencies": {
-    "axios": "^0.25.0",
     "canvas": "^2.10.1",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
     "discord.js": "^14.1.2",
-    "express": "^4.17.2",
-    "ioredis": "^4.28.3",
     "klaw": "^4.0.1",
-    "module-alias": "^2.2.2",
-    "mongoose": "^6.1.7",
-    "node-fetch": "^3.2.0"
+    "module-alias": "^2.2.2"
   },
   "name": "discordbot-boilerplate",
   "version": "1.0.0",

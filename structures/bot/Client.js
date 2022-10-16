@@ -20,11 +20,9 @@ module.exports = class BotClient extends Discord.Client {
     this.framework = {
       interactionContext: require("@structures/framework/ContextInteraction"),
     }
-    this.database = new (require('./DatabaseManager.js'))(this);
     this.webhooks = new (require('@structures/webhooks/WebhookManager.js'))(this);
     this.loader = new (require('./Loader.js'))(this);
 
-    // this.database.init();
     this.loader.start();
   }
 }
