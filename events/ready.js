@@ -18,6 +18,6 @@ module.exports = class extends Event {
     this.activityInterval = setInterval(setupInit, 90000);
     
     // if(client.guilds.cache.has('783178035322159156')) client.guilds.cache.get('783178035322159156').commands.set(client.commands.map(m=>m.commandData))
-    client.application.commands.set(client.commands.map(m=>m.commandData));
+    // client.application.commands.set(client.commands.map(m=>m.commandData));
   }
 }
