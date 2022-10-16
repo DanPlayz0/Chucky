@@ -52,7 +52,7 @@ module.exports = class Command {
         ctx.sendMsg(new ctx.MessageEmbed()
           .setTitle('Oops')
           .setColor('Red')
-          .setDescription(`The error that occured has been logged into our systems. If this is repeative, report it to DanPlayz#7757 at <${ctx.client.config.supportServerInvite}>.\n\`\`\`js\n${err.message}\`\`\``))
+          .setDescription(`The error that occured has been logged into our systems. If this is repeative, report it to DanPlayz#7757 via DMs.\n\`\`\`js\n${err.message}\`\`\``))
       }
     } else if(commandType === 'autocomplete') {
       try {
@@ -63,6 +63,6 @@ module.exports = class Command {
         ctx.client.webhooks.error.send(`**${ctx.client.user.username} - Command Autocomplete Error:**\n\`\`\`\n${err.stack}`.slice(0,1995)+'\`\`\`')
         ctx.interaction.respond([]);
       }
-    } else return ctx.sendMsg(`This seems to be a broken command. Please report this to DanPlayz#7757 at <${ctx.client.config.supportServerInvite}>.`);
+    } else return ctx.sendMsg(`This seems to be a broken command. Please report this to DanPlayz#7757 via DMs.`);
   }
 }
