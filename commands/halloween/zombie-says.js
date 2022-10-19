@@ -75,20 +75,23 @@ module.exports = class extends Command {
       let pattern = guessMode ? patterns[0] : patterns[buttonPattern[i]];
       let stepText = pattern.name;
 
+      let extraText = "";
       if(guessMode) {
         if(guessed.length == buttonPattern.length) {
           pattern = patterns[buttonPattern[i]];
           stepText = pattern.name;
-          stepText += guessed[i] == buttonPattern[i] ? " Correct" : " Incorrect";
+          extraText += guessed[i] == buttonPattern[i] ? " Correct" : " Incorrect";
         } else if (guessed.length >= i+1) {
           stepText = "Guessed";
+          extraText = patterns[guessed[i]].name
         }
       }
 
-      context.textAlign = 'center';
+      context.textAlign = 'left';
       context.font = "12px Arial";
       context.fillStyle = pattern.color;
-      context.fillText(stepText, 65, y + 20);
+      context.fillText(stepText, 25, y + 20);
+      context.fillText(extraText, 85, y + 20);
       context.fillRect(11+190, y, 190, 30);
 
       y += 40;
