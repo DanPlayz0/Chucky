@@ -22,5 +22,5 @@ Note: We do not recommend self hosting but here are the instructions, if you'd l
 - [Original Announcement](https://discord.com/channels/264445053596991498/285458046006591499/1028686811817574531)
 ![Image of Announcement](https://discord.mx/EXnpWjrFIK.png)
 
-<!-- - [Results](Unknown) -->
-<!-- ![Image of Results](Unknown) -->
+- [Results](https://discord.com/channels/264445053596991498/285458046006591499/1033782020607848459)
+![Image of Results](https://discord.mx/YKnHAZx3bW.png)
