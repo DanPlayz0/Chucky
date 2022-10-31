@@ -22,7 +22,7 @@ const treeKits = {
     normalHouse: "https://discord.mx/CxRnBX4V82.png",
     trickHouse: "https://discord.mx/kdVuvGAv7K.png",
   },
-  improbable: {
+  expert: {
     imageSize: 400,
     minMax: [14, 25],
     guessAmt: 1,
@@ -46,7 +46,7 @@ module.exports = class extends Command {
             { name: "Easy", value: "easy" },
             { name: "Normal", value: "normal" },
             { name: "Hard", value: "hard" },
-            { name: "Improbable", value: "improbable" },
+            { name: "Expert", value: "expert" },
           ],
         },
       ],
@@ -88,7 +88,7 @@ module.exports = class extends Command {
         type: 1,
         components: Array.from(
           { length: Math.ceil(hidingSpots / 5) === 1 ? hidingSpots : Math.ceil(hidingSpots / 5) === ri + 1 ? hidingSpots - (Math.ceil(hidingSpots / 5) - 1) * 5 : 5, },
-          (_, i) => ({ type: 2, style: 2, emoji: { name: "🏚️" }, customId: `housefinder_${ri}_${i + 1}`, })
+          (_, i) => ({ type: 2, style: 2, emoji: { name: "🏚️" }, customId: `housefinder_${ri}_${i}`, })
         ).slice(0, 5),
       })),
     });
@@ -103,7 +103,10 @@ module.exports = class extends Command {
     let triesLeft = guessAmt;
 
     collector.on("end", (_, reason) => {
-      let embed2 = new ctx.EmbedBuilder().setTitle("uhh???");
+      let embed2 = new ctx.EmbedBuilder()
+        .setTitle("Yikes")
+        .setColor("Red")
+        .setDescription(`You ran out of time.\n\nWant to play again? Run the command again!`);
       if (reason === "fail")
         embed2 = new ctx.EmbedBuilder()
           .setTitle("Yikes")
@@ -134,9 +137,7 @@ module.exports = class extends Command {
             new ctx.EmbedBuilder()
               .setTitle("Try Again")
               .setColor("Orange")
-              .setDescription(
-                `You still have ${triesLeft} attempts and time ends <t:${Math.floor((Date.now()+(timeLeft-Date.now()))/1000)}:R>, to guess the correct one.`
-              ),
+              .setDescription(`You still have ${triesLeft} attempts and time ends <t:${Math.floor((Date.now()+(timeLeft-Date.now()))/1000)}:R>, to guess the correct one.`),
           ],
           ephemeral: true,
         });
