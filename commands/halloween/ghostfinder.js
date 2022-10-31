@@ -128,7 +128,7 @@ module.exports = class extends Command {
       triesLeft -= 1;
       const [ri, ti] = interaction.customId.split("_").slice(1);
 
-      if (parseInt(array[ri][ti]) === trickHouseNum) {
+      if (parseInt(array[ri][ti]) === trickHouseNum-1) {
         interaction.deferUpdate();
         collector.stop("success");
       } else if (triesLeft != 0) {
