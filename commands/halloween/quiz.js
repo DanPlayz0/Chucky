@@ -50,7 +50,7 @@ module.exports = class extends Command {
     const msg = await ctx.sendMsg(new ctx.EmbedBuilder()
     .setTitle('Quiz your Halloween Knowledge!')
     .setColor('#F7A02C')
-    .setDescription(`Time runs out <t:${Math.floor((Date.now()+300*1e3)/1000)}:R>\n\n**Question:** ${randomQuestion.question}\n\n**Choices:**\n~~---------~~\n${options.map((x) => `**#${x.num}** ${x.name}`).join('\n')}`), {
+    .setDescription(`Time runs out <t:${Math.floor((Date.now()+300*1e3)/1000)}:R>\n\n**Question:** ${randomQuestion.question}\n\n**Choices:**\n~~---------~~\n${options.map((x,i) => `**#${i+1}** ${x.name}`).join('\n')}`), {
       components: [{
         type:1, components: [
           { type:2, style:1, label: "#1", custom_id: "quiz_answer_1" },
@@ -92,7 +92,7 @@ module.exports = class extends Command {
             .setTitle('Quiz your Halloween Knowledge!')
             .setColor('#F7A02C')
             .setThumbnail("https://discord.mx/QDUCdLqqwH.png")
-            .setDescription(`**Question:** ${randomQuestion.question}\n\n**Choices:**\n~~---------~~\n${options.map((x) => `**#${x.num}** ${x.name}`).join('\n')}\n\nYou choose answer **#${answer}** ${answer == correctAnswer ? "and that was **correct**! 🎉" : `but the correct answer was **#${correctAnswer}**. 😦`}`)
+            .setDescription(`**Question:** ${randomQuestion.question}\n\n**Choices:**\n~~---------~~\n${options.map((x,i) => `**#${i+1}** ${x.name}`).join('\n')}\n\nYou choose answer **#${answer}** ${answer == correctAnswer ? "and that was **correct**! 🎉" : `but the correct answer was **#${correctAnswer}**. 😦`}`)
         ],
         components: [],
       })
