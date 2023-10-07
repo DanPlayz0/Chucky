@@ -15,7 +15,7 @@ module.exports = class extends Command {
 
   async run(ctx) {
     if(!/^https\:\/\//.test(ctx.args.getString('url'))) return ctx.sendMsg("The url must start with `https://`");
-    if(!/localhost/.test(ctx.args.getString('url'))) return ctx.sendMsg("The url must not include `localhost`");
+    if(/localhost/.test(ctx.args.getString('url'))) return ctx.sendMsg("The url must not include `localhost`");
 
     const img = await Canvas.loadImage(ctx.args.getString('url'));
     const canvas = Canvas.createCanvas(img.width + 30, img.height + 30);
