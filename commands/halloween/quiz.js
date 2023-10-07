@@ -44,11 +44,8 @@ module.exports = class extends Command {
     const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
 
     let options = [...randomQuestion.answers], correctAnswer = null;
-    shuffle(options);
-    for(let optionIndex = 1; optionIndex<options.length; optionIndex++) {
-      if (options[optionIndex].correct) correctAnswer = optionIndex;
-      options[optionIndex].num = optionIndex;
-    }
+    options = shuffle(options);
+    correctAnswer = options.findIndex((x) => x.correct)+1;
 
     const msg = await ctx.sendMsg(new ctx.EmbedBuilder()
     .setTitle('Quiz your Halloween Knowledge!')
@@ -105,6 +102,7 @@ module.exports = class extends Command {
 
 
 function shuffle(array) {
+  array = [...array];
   let currentIndex = array.length,  randomIndex;
 
   // While there remain elements to shuffle.
