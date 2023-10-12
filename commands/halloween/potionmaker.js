@@ -17,21 +17,43 @@ const items = [
   { name: "Iron axe", r: 89, g: 62, b: 49 },
 ].map((x, i) => (x.id = i, x)).slice(0, 25);
 
+const convertToRgb = hex => [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)];
+const darken = (rgb, percent) => rgb.map(x=>Math.min(255, Math.max(0, x - x * (percent / 100))));
+function replaceColorWithAnother(imageData, fromColor, toColor) {
+  const { data } = imageData;
+  for (let i = 0; i < data.length; i += 4) {
+    const pixelR = data[i], pixelG = data[i + 1], pixelB = data[i + 2];
+    if (pixelR === fromColor[0] && pixelG === fromColor[1] && pixelB === fromColor[2]) {
+      data[i] = toColor[0];
+      data[i + 1] = toColor[1];
+      data[i + 2] = toColor[2];
+    }
+  }
+}
+
+const differences = {
+  second: 22,
+  third: 35,
+  highlight: 32
+};
+const hexRGB = ["#54ff6e", "#17b070", "#057863", "#e3ff87"].map(x=>convertToRgb(x));
+
 let foregroundImage;
 const cauldron = (addedItems = []) => {
   const canvas = Canvas.createCanvas(foregroundImage.width, foregroundImage.height);
   const context = canvas.getContext('2d');
-  
+  context.drawImage(foregroundImage, 0, 0);
+  if (addedItems.length == 0) return canvas;
+
   let rgb = addedItems.reduce((p,c) => (p[0]+=c.r,p[1]+=c.g,p[2]+=c.b,p), [0,0,0]);
   rgb = rgb.map(x=>Math.round(x/(addedItems.length == 0 ? 1 : addedItems.length)));
-  rgb = rgb.map(x=>x > 255 ? 255 : x < 0 ? 0 : x);
+  rgb = rgb.map(x=>x > 255 ? 255 : x < 25 ? 25 : x);
   
-  context.fillStyle = `rgb(${rgb.join(', ')})`;
-  
-  context.fillRect(91,84,420,297);
-  context.fillRect(148,44,311,40);
+  const colors = Object.values(differences).map(x => darken(rgb, x));
+  const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+  hexRGB.map((x,i) => replaceColorWithAnother(imageData, x, [rgb, ...colors][i]))
+  context.putImageData(imageData, 0, 0);
 
-  context.drawImage(foregroundImage, 0,0);
   return canvas;
 }
 
@@ -46,7 +68,7 @@ module.exports = class extends Command {
   }
 
   async run(ctx) {
-    if(!foregroundImage) foregroundImage = await Canvas.loadImage("https://discord.mx/cbs3ICN2S0.png");
+    if(!foregroundImage) foregroundImage = await Canvas.loadImage("https://discord.mx/oOAzLOoMAs.png");
 
     let selectedItems = [];
     const embed = new ctx.EmbedBuilder()
