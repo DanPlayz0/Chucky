@@ -31,7 +31,6 @@ module.exports = class extends Command {
         { name: '➤ General', value: ctx.client.commands.filter(m => m.conf.category == "General").map(m => `\`${m.commandData.name}\``).join(' ') || 'None', inline: false },
         { name: '➤ Halloween', value: ctx.client.commands.filter(m => m.conf.category == "Halloween").map(m => `\`${m.commandData.name}\``).join(' ') || 'None', inline: false }
       ])
-      .setFooter({text: "This bot was made for the top.gg halloween hackathon"});
     ctx.sendMsg(embed)
   }
   async commandInfo(ctx, command, embed) {
