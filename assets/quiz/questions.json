@@ -151,7 +151,7 @@
     "answers": [
       {
         "name": "Cucumbers",
-        "correct": false
+        "correct": true
       },
       {
         "name": "Bananas",
