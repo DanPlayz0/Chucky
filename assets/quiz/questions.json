@@ -343,5 +343,236 @@
         "correct": false
       }
     ]
+  },
+  {
+    "question": "What is a pepita?",
+    "answers": [
+      {
+        "name": "A pumpkin seed",
+        "correct": true
+      },
+      {
+        "name": "The hull of a pumpkin seed",
+        "correct": false
+      },
+      {
+        "name": "A pumpkin vine",
+        "correct": false
+      },
+      {
+        "name": "A miniature pumpkin",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What is the scientific term for the sticky stuff inside a pumpkin?",
+    "answers": [
+      {
+        "name": "Ranunculus",
+        "correct": false
+      },
+      {
+        "name": "Mucilage",
+        "correct": false
+      },
+      {
+        "name": "Pulp",
+        "correct": false
+      },
+      {
+        "name": "Funiculus",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Which is not a variety of minature pumpkin?",
+    "answers": [
+      {
+        "name": "Wee-Be-little",
+        "correct": false
+      },
+      {
+        "name": "Baby Boo",
+        "correct": false
+      },
+      {
+        "name": "Tom Thumb",
+        "correct": true
+      },
+      {
+        "name": "Munchkin",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What is the best type of pumpkin for making pumpkin pie?",
+    "answers": [
+      {
+        "name": "Sugar pumpkin",
+        "correct": true
+      },
+      {
+        "name": "Custard pumpkin",
+        "correct": false
+      },
+      {
+        "name": "Sweet Baby pumpkin",
+        "correct": false
+      },
+      {
+        "name": "Orange Treat pumpkin",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "An average pumpkin is ___ % water",
+    "answers": [
+      {
+        "name": "20",
+        "correct": false
+      },
+      {
+        "name": "70",
+        "correct": false
+      },
+      {
+        "name": "40",
+        "correct": false
+      },
+      {
+        "name": "90",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "One cup of canned pure pumpkin contains ___ calories",
+    "answers": [
+      {
+        "name": "20",
+        "correct": false
+      },
+      {
+        "name": "50",
+        "correct": false
+      },
+      {
+        "name": "80",
+        "correct": true
+      },
+      {
+        "name": "100",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How can you tell if a pumpkin is fresh?",
+    "answers": [
+      {
+        "name": "The stem is firm and green",
+        "correct": true
+      },
+      {
+        "name": "You can puncture its skin with your fingernail",
+        "correct": false
+      },
+      {
+        "name": "It smells sweet",
+        "correct": false
+      },
+      {
+        "name": "The bottom is flat",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "You can extend the life of a carved pumpkin by:",
+    "answers": [
+      {
+        "name": "Rubbing vinegar over the carved areas",
+        "correct": true
+      },
+      {
+        "name": "Freezing it",
+        "correct": false
+      },
+      {
+        "name": "Coating it with cooking spray",
+        "correct": false
+      },
+      {
+        "name": "Spraying it with a bleach solution",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What is the ideal time to plant pumpkins?",
+    "answers": [
+      {
+        "name": "In the summer",
+        "correct": false
+      },
+      {
+        "name": "In the spring",
+        "correct": true
+      },
+      {
+        "name": "In the autumn",
+        "correct": false
+      },
+      {
+        "name": "In the winter",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What is a piece of land with pumpkins on it called?",
+    "answers": [
+      {
+        "name": "Pumpkin Land",
+        "correct": false
+      },
+      {
+        "name": "Pumpkin Store",
+        "correct": false
+      },
+      {
+        "name": "Pumpkin Patch",
+        "correct": true
+      },
+      {
+        "name": "Pumpkin Lot",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "The Jack o Lantern is named after:",
+    "answers": [
+      {
+        "name": "Jack o Brian, the 1st person to turn a pumpkin into a lantern",
+        "correct": false
+      },
+      {
+        "name": "Stingy Jack, an Irish folklore who put charcoal in a turnip",
+        "correct": true
+      },
+      {
+        "name": "Captain Jack, a headless horseman who used a Jack o Lantern as a head",
+        "correct": false
+      },
+      {
+        "name": "Andrew Jackson, who hollowed out gourds for lanterns as a boy",
+        "correct": false
+      }
+    ]
   }
 ]
