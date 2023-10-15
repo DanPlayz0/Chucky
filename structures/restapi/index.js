@@ -1,17 +1,29 @@
 const cookieParser = require('cookie-parser'), express = require('express'), cors = require('cors');
 
 module.exports = class RestAPI {
-  constructor(client) {
-    this.client = client;
+  constructor(config, manager) {
+    this.config = config;
+    this.manager = manager;
 
     // Web Server
     this.express = express();
-    this.express.use(async (req,res,next) => { req.client = this.client; next(); })
+    this.express.use(async (req,res,next) => { 
+      req.config = this.config;
+      req.manager = this.manager;
+
+      res.sendStatus = (code) => {
+        if (code == 401) return res.status(code).send({ message: "Missing Authorization" });
+        else if (code == 403) return res.status(code).send({ message: "Invalid Authorization" });
+        else if (code == 404) return res.status(code).send({ message: "That page is missing or never existed." });
+        else if (code == 500) return res.status(code).send({ message: "Internal Server Error" });
+        else return res.status(code).send({ message: `${code} - Not sure what this means` });
+      }
+      next();
+    })
     this.express.use(cookieParser());
     this.express.use(express.json());
     this.express.use(express.urlencoded({extended: true}));
-    this.express.use(cors({ origin: this.client.config.domain, credentials: true }))
-    // this.express.use(express.static(__dirname + "/../public"));
+    this.express.use(cors({ origin: this.config.domain, credentials: true }));
     this.express.disable('x-powered-by');
 
     this.loadRoutes().loadErrorHandler();
@@ -23,7 +35,9 @@ module.exports = class RestAPI {
   }
 
   loadRoutes() {
-    this.express.use("/v1", require(`@structures/restapi/v1/index.js`));
+    // this.express.use("/auth", require(`./auth/index.js`));
+    this.express.use("/v1", require(`./v1/index.js`));
+    // this.express.use("/guild", require(`./guild/index.js`));
     return this;
   }
 

@@ -1,25 +1,26 @@
 const { Router } = require("express");
+const Discord = require('discord.js');
 
 const route = Router();
 
 route.get('/stats', async (req, res, next) => {
-  const guildCount = req.client.shard ? await req.client.shard.fetchClientValues('guilds.cache.size') : [req.client.guilds.cache.size];
-  const ping = req.client.shard ? await req.client.shard.fetchClientValues('ws.ping') : [req.client.ws.ping];
-  const users = req.client.shard ? await req.client.shard.broadcastEval(() => this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)) : [req.client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)];
+  const guildCount = await req.manager.fetchClientValues('guilds.cache.size');
+  const ping = await req.manager.fetchClientValues('ws.ping');
+  const users = await req.manager.broadcastEval(() => this.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0));
 
   let shards = [];
   guildCount.map((count, shardId) => {
     shards.push({
-      id: shardId,
+      id: shardId, 
       guilds: count,
-      users: users[shardId],
+      users: users[shardId], 
       ping: ping[shardId],
     })
   });
   let redisStats = {
     version: {
       nodejs: process.version,
-      discordjs: "v" + req.client.discord.version,
+      discordjs: "v"+Discord.version,
     },
     shards: shards,
     total: {
@@ -29,6 +30,6 @@ route.get('/stats', async (req, res, next) => {
     }
   };
   res.json(redisStats)
-});
+})
 
 module.exports = route;
