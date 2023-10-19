@@ -12,3 +12,10 @@ services:
       WEBHOOK_ERROR: ${WEBHOOK_ERROR} # Discord webhook url
       WEBHOOK_COMMAND: ${WEBHOOK_COMMAND} # Discord webhook url
       WEBHOOK_GUILD: ${WEBHOOK_GUILD} # Discord webhook url
+    networks:
+      bridgenet: {}
+
+networks:
+  bridgenet:
+    external: true
+    name: bridge
